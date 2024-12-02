@@ -1,11 +1,11 @@
 export class Producto {
     // propiedades privadas y publicas
-    #precio;
+    // #precio;
     // constructor
     constructor(nombre, cantidad, precio){
         this.nombre = nombre;
         this.cantidad = cantidad;
-        this.#precio = precio;
+        this.precio = precio;
     }
 
     //metodos
@@ -17,10 +17,10 @@ export class Producto {
     }
 
     getPrecio(){
-        return this.#precio;
+        return this.precio;
     }
     setPrecio(newPrecio){
-        this.#precio = newPrecio;
+        this.precio = newPrecio;
     }
 
     getCantidad(){
@@ -32,10 +32,10 @@ export class Producto {
 
 
     calcularTotal(){
-        return this.#precio * this.cantidad;
+        return this.precio * this.cantidad;
     }
     obtenerInfo(){
-        return `Nombre: ${this.nombre}, Cantidad: ${this.cantidad}, Precio: ${this.#precio} --- Total: ${this.calcularTotal()}`;
+        return `Nombre: ${this.nombre}, Cantidad: ${this.cantidad}, Precio: ${this.precio} --- Total: ${this.calcularTotal()}`;
     }
 
 }
